@@ -38,10 +38,10 @@ if ($currentTitle !== $lastTitle) {
   $mailer = Swift_Mailer::newInstance($transport);
 
   $message = Swift_Message::newInstance()
-    ->setSubject('New vehicle posted on UsedVictoria.com')
+    // ->setSubject('New vehicle posted on UsedVictoria.com')
     ->setFrom(array(getenv('MAIL_FROM_ADDRESS') => getenv('MAIL_FROM_NAME')))
     ->setTo(array(getenv('MAIL_TO_ADDRESS') => getenv('MAIL_TO_NAME')))
-    ->setBody('New '.getenv('VEHICLE_MAKE').' posted on '.getenv('MAIN_SITE').': '.$currentTitle.' | '.$currentLink, 'text/html');
+    ->setBody('New car posted on '.getenv('MAIN_SITE').': '.$currentLink.' '.$currentTitle, 'text/html');
 
   $f = false;
   if ($mailer->send($message, $f)) {
