@@ -1,0 +1,13 @@
+{
+    "name": "jonbell/checkforcars",
+    "require": {
+        "swiftmailer/swiftmailer": "^5.4",
+        "vlucas/phpdotenv": "^2.4"
+    },
+    "authors": [
+        {
+            "name": "Jonathan Bell",
+            "email": "jonathanbell.ca@gmail.com"
+        }
+    ]
+}
