@@ -8,8 +8,8 @@ Screen scraping PHP script that you can put on a `cron` task in order to check f
 1.  `cd` into the root of the cloned repository.
 1.  `composer install`
 1.  `touch last_car.log && touch notifications.log`
-1.  `cp config.ini.example config.ini`
-1.  Edit all of the values inside `config.ini` to match those of your SMTP server and your search parameters. Use [an email address that will text your smartphone](https://www.rogers.com/customer/support/article/set-up-email-to-text) if you'd like SMS notifications.
+1.  `cp .env.example .env`
+1.  Edit all of the values inside `.env` to match those of your SMTP server and your search parameters. Use [an email address that will text your smartphone](https://www.rogers.com/customer/support/article/set-up-email-to-text) if you'd like SMS notifications.
 
 Then setup `cron` on your server to run the `checkforcars.php` script on an interval (something like every hour would work well).
 
